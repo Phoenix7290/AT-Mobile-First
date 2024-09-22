@@ -8,6 +8,7 @@
     text-align: center;
     border: 2px solid black;
     padding: 5vw;
+    margin: 1vw;
 }
 
 .container main {
@@ -16,6 +17,7 @@
     text-align: center;
     border: 2px solid black;
     padding: 5vw;
+    margin: 1vw;
 }
 
 .container article {
@@ -24,6 +26,11 @@
     text-align: center;
     border: 2px solid black;
     padding: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vw;
+    height: 25vh;
 }
 
 .container section {
@@ -32,6 +39,11 @@
     text-align: center;
     border: 2px solid black;
     padding: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vw;
+    height: 25vh;
 }
 
 .container aside {
@@ -43,6 +55,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1vw;
 }
 
 .container footer {
@@ -50,4 +63,5 @@
     text-align: center;
     border: 2px solid black;
     padding: 5vw;
+    margin: 1vw;
 }

@@ -1,5 +1,12 @@
-export default function App() {
-    return (
-        <div>Hello World</div>
-    )
+import CustomCard from './components'; 
+
+function App() {
+  return (
+    <div>
+      <CustomCard 
+      />
+    </div>
+  );
 }
+
+export default App

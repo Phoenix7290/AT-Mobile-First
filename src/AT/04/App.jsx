@@ -6,7 +6,7 @@ export default function App() {
       <header>Header</header>
       <main>Global Menu</main>
       <article>Context Menu</article>
-      <section>Main Menu</section>
+      <section>Main Content</section>
       <aside>Ads</aside>
       <footer>Footer</footer>
     </div>
