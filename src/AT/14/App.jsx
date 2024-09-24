@@ -1,46 +1,34 @@
-import { useState } from "react";
-import Header from "./components/Header";
-import FriendPost from "./components/FriendPost";
-import FriendList from "./components/FriendList";
-import SuggestionsList from "./components/SuggestionsList";
-import "./main.css";
+import Header from './components/Header';
+import MainPost from './components/MainPost';
+import ContributionsList from './components/ContributionsList';
+import ReplyForm from './components/ReplyForm';
+import TopTopics from './components/TopTopics';
+import styles from './App.module.css';
 
-export default function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const contributions = [
+  { author: 'Maria', date: '23/09/2024', likes: 20, content: 'Caramba o que eu acabei de ler...' },
+  { author: 'Pedro', date: '23/09/2024', likes: 15, content: 'Vamos Batman! Bora' },
+  { author: 'Ana', date: '22/09/2024', likes: 10, content: 'Esse povo é complicado.' },
+  { author: 'Carlos', date: '22/09/2024', likes: 8, content: 'Vamos Destemido, continue!' },
+  { author: 'Lucia', date: '21/09/2024', likes: 5, content: 'EU quero o Batman aquii' }
+];
 
-  const friends = [
-    { id: 1, name: "João", mutualFriends: 2, image: "https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w" },
-    { id: 2, name: "Pedro", mutualFriends: 3, image: "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 3, name: "Joana", mutualFriends: 1, image: "https://th.bing.com/th/id/OIP.ENIN8L2HjOG7nogJc7KrvQHaHw?rs=1&pid=ImgDetMain" }
-  ];
+const recentTopics = ['Israel', 'Cade o café', 'EUA', 'Gustavo Lima', 'Bets'];
+const mostReplied = ['Gustavo Lima', 'Bets', 'EUA', 'Como se proteger', 'Estudar programação'];
+const mostLiked = ['Cade o café', 'Gustavo Lima', 'O amor', 'Infnet', 'O que é esse Batman?'];
 
-  const suggestions = [
-    { id: 1, name: "Maria", mutualFriend: "João", image: "https://images.pexels.com/photos/460295/pexels-photo-460295.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 2, name: "Fernando", mutualFriend: "Pedro", image: "https://images.pexels.com/photos/988914/pexels-photo-988914.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 3, name: "Ana", mutualFriend: "Joana", image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600" }
-  ];
-
+function App() {
   return (
-    <div>
-      <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      <main className="main-content">
-        <FriendList friends={friends} />
-        <section className="feed">
-          <FriendPost
-            image="https://th.bing.com/th/id/OIP.7CVJ2d29GvD0CjmojqgOQAHaE8?rs=1&pid=ImgDetMain"
-            title="Olha essa paisagem!"
-            subtitle="Linda né?"
-            imageOfAuthor="https://th.bing.com/th/id/OIP.ENIN8L2HjOG7nogJc7KrvQHaHw?rs=1&pid=ImgDetMain"
-            author="Joana"
-            date="12/09/2024"
-            description="Essa foi minha viagem para o Japão. Foi incrível!"
-            likes={10}
-            shares={2}
-            comments={["Cenário legal demais!", "Incrível."]}
-          />
-        </section>
-        <SuggestionsList suggestions={suggestions} />
+    <div className={styles.container}>
+      <Header />
+      <main className={styles.content}>
+        <MainPost title="Eu descobri que sou o Batman" subtitle="Isso mesmo que você leu" content="Eu (Homem de 14 anos) descobri que sou o Batman, eu sou um morcego que vive na escuridão e vai na caça contra o crime. Eu salvarei o mundo!" author="Destemido" date="23/09/2024" likes="80" repost="5"/>
+        <ContributionsList contributions={contributions}/>
+        <ReplyForm />
+        <TopTopics recentTopics={recentTopics} mostReplied={mostReplied} mostLiked={mostLiked}/>
       </main>
     </div>
   );
 }
+
+export default App;

@@ -7,7 +7,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: "index.html",	
+        main: "index.html",
+
         at_01: "src/AT/01/index.html",
         at_02: "src/AT/02/index.html",
         at_03: "src/AT/03/index.html",
