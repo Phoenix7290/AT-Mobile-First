@@ -12,6 +12,7 @@
   flex-direction: row nowrap;
   justify-content: space-between;
   align-items: center;
+  position: relative; /* Ensure positioning for the menu list */
 }
 
 .menu-toggle {
@@ -38,6 +39,11 @@
   list-style-type: none;
   padding: 0;
   display: none;
+  position: absolute; /* Ensure the list is positioned relative to the nav */
+  top: 100%; /* Position the list below the nav */
+  left: 0;
+  width: 100%; /* Make the dropdown full width */
+  background-color: #333;
 }
 
 .menu-list li {
@@ -52,27 +58,23 @@
 
 @media (min-width: 768px) {
   .menu-toggle {
-    display: none; 
+    display: none;
   }
+
+  .menu-icon {
+    display: none;
+  }
+
   .menu-list {
     display: flex;
+    justify-content: space-around; 
+    position: static; 
+    width: 100%; 
   }
+
   .menu-list li {
     background-color: transparent;
     border-bottom: none;
     padding: 0 15px;
-  }
-
-  hgroup ul {
-    display: flex;
-    flex-direction: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-  }
-
-  hgroup ul li {
-    padding: 10px;
   }
 }

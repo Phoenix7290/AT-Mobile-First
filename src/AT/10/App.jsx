@@ -10,26 +10,23 @@ function Menu() {
   };
 
   return (
-    <>
-      <nav className="menu">
-        <button className="menu-toggle" onClick={toggleMenu}>
-          <RiMenuLine />
-        </button>
-        <div className="brand">Brand</div>
-        <div className="user-icon">
-          <span className="icon"><IoPersonCircle /></span>
-        </div>
+    <nav className="menu">
+      <div className="menu-icon" onClick={toggleMenu}>
+        <span className="icon"><RiMenuLine /></span>
+      </div>
+      <div className="brand">Brand</div>
+      
+      <ul className={`menu-list ${isOpen ? "open" : "closed"}`}>
+        <li>Opção 1</li>
+        <li>Opção 2</li>
+        <li>Opção 3</li>
+        <li>Opção 4</li>
+      </ul>
 
-      </nav>
-      <hgroup>
-        <ul className={`menu-list ${isOpen ? "open" : "closed"}`}>
-          <li>Opção 1</li>
-          <li>Opção 2</li>
-          <li>Opção 3</li>
-          <li>Opção 4</li>
-        </ul>
-      </hgroup>
-    </>
+      <div className="user-icon" onClick={toggleMenu}>
+        <span className="icon"><IoPersonCircle /></span>
+      </div>
+    </nav>
   );
 }
 
