@@ -44,10 +44,53 @@
 
 @media (min-width: 768px) {
   .app {
+    width: 100%;
+    padding: 0;
+  }
+
+  .question-container {
+    width: 80%;
+    text-align: center;
+  }
+
+  .question-container h1 {
+    margin-bottom: 3vh;
+  }
+
+  .app {
     padding: 50px;
+  }
+
+  .options {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .options button {
+    width: 250px;
+    height: 200px;
   }
 
   .options button {
     font-size: 1.2rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .app {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+
+  .options button {
+    background-color: #3498db;
+  }
+
+  .options button:hover {
+    background-color: #2980b9;
   }
 }

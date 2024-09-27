@@ -12,8 +12,6 @@ function App() {
           <li><a href="#">Home</a></li>
           <li><a href="#">Produtos</a></li>
           <li><a href="#">Serviços</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Contato</a></li>
         </ul>
       </nav>
       <IoPersonCircle className="person-icon"/>

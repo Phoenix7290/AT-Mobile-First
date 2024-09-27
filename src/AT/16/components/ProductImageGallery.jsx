@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 const ProductImageGallery = () => {
-  const [currentImage, setCurrentImage] = useState('https://placehold.co/200');
-  const images = ['https://placehold.co/200', 'https://placehold.co/150', 'https://placehold.co/100'];
+  const [currentImage, setCurrentImage] = useState('https://th.bing.com/th/id/OIP.-zN-83xIZK-HfwP4Sv9fRwHaE7?rs=1&pid=ImgDetMain');
+  const images = ['https://th.bing.com/th/id/OIP.-zN-83xIZK-HfwP4Sv9fRwHaE7?rs=1&pid=ImgDetMain', 'https://th.bing.com/th/id/OIP.KXVeLsF3TxJsa-YbxqyOzgHaEK?w=840&h=472&rs=1&pid=ImgDetMain', 'https://th.bing.com/th/id/OIP.Ho-U8oVlLvjX_x6_oYvdDAHaF3?w=580&h=460&rs=1&pid=ImgDetMain'];
 
   return (
     <div className="image-gallery">

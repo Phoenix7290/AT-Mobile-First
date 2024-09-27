@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import FriendPost from "./components/FriendPost";
 import FriendList from "./components/FriendList";
 import SuggestionsList from "./components/SuggestionsList";
+import { Container, Box } from "@mui/material";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,16 +16,24 @@ export default function App() {
 
   const suggestions = [
     { id: 1, name: "Maria", mutualFriend: "João", image: "https://images.pexels.com/photos/460295/pexels-photo-460295.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 2, name: "Fernando", mutualFriend: "Pedro", image: "https://images.pexels.com/photos/988914/pexels-photo-988914.jpeg?auto=compress&cs=tinysrgb&w=600" },
-    { id: 3, name: "Ricardo", mutualFriends: "Joana", image: "https://th.bing.com/th/id/OIP.eVQqUbLayb6DS_wbwHU9LQAAAA?rs=1&pid=ImgDetMain" }
+    { id: 2, name: "Fernando", mutualFriend: "Joana", image: "https://images.pexels.com/photos/988914/pexels-photo-988914.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    { id: 3, name: "Ricardo", mutualFriend: "Pedro", image: "https://th.bing.com/th/id/OIP.eVQqUbLayb6DS_wbwHU9LQAAAA?rs=1&pid=ImgDetMain" }
   ];
 
   return (
-    <div>
+    <Container>
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      <main className="main-content">
+      <Box 
+        component="main" 
+        sx={{
+          display: 'flex', 
+          flexDirection: { xs: 'column', sm: 'row' },
+          gap: 2,
+        }}
+        margin={1}
+      >
         <FriendList friends={friends} />
-        <section className="feed">
+        <Box component="section" sx={{ flexGrow: 1 }}>
           <FriendPost
             image="https://th.bing.com/th/id/OIP.7CVJ2d29GvD0CjmojqgOQAHaE8?rs=1&pid=ImgDetMain"
             title="Olha essa paisagem!"
@@ -37,9 +46,9 @@ export default function App() {
             shares={2}
             comments={["Cenário legal demais!", "Incrível."]}
           />
-        </section>
+        </Box>
         <SuggestionsList suggestions={suggestions} />
-      </main>
-    </div>
+      </Box>
+    </Container>
   );
 }

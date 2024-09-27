@@ -102,11 +102,6 @@
     text-align: center;
   }
 
-  .container main button {
-    margin: 2vw;
-    display: none;
-  }
-
   .container article {
     grid-column: 1 / 2;
     grid-row: 3 / 4;

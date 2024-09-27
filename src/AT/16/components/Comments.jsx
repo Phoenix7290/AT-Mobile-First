@@ -1,8 +1,6 @@
-const Comments = () => {
-  const comments = [
-    { name: 'John Doe', date: '2024-08-30', comment: 'Great product!' },
-    { name: 'Jane Smith', date: '2024-08-29', comment: 'Good value for money.' },
-  ];
+import PropTypes from 'prop-types';
+
+const Comments = ({comments}) => {
 
   return (
     <div className="comments">
@@ -17,6 +15,16 @@ const Comments = () => {
       </div>
     </div>
   );
+};
+
+Comments.propTypes = {
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      comment: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default Comments;

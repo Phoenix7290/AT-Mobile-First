@@ -27,6 +27,12 @@ body, html {
   flex-direction: column;
 }
 
+.image-gallery> img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
 .main-image {
   width: 100%;
   height: auto;
@@ -35,6 +41,12 @@ body, html {
 .thumbnail-container {
   display: flex;
   margin-top: 10px;
+}
+
+.thumbnail-container img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
 }
 
 .thumbnail {
@@ -54,7 +66,7 @@ body, html {
 
 .product-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column nowrap;
 }
 
 .related-product {
@@ -63,9 +75,13 @@ body, html {
   margin-bottom: 20px;
 }
 
+.related-product p {
+  width: 100px;
+}
+
 .related-product img {
-  width: 100%;
-  height: auto;
+  width: 200px;
+  height: 200px;  
 }
 
 .comments {
@@ -131,5 +147,15 @@ body, html {
 
   .menu-toggle {
     display: none;
+  }
+
+  .thumbnail-container img {
+    width: 150px;
+    height: 100px;
+    margin-right: 10px;
+  }
+
+  .product-list {
+    flex-flow: row nowrap;
   }
 }

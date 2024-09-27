@@ -12,10 +12,10 @@ const Menu = ({ toggleDarkMode }) => {
       </button>
       <ul className={`menu-list ${isMenuOpen ? 'open' : 'closed'}`}>
         <li>Home</li>
-        <li>Shop</li>
-        <li>About</li>
-        <li>Contact</li>
-        <li><button onClick={toggleDarkMode}>Toggle Dark Mode</button></li>
+        <li>Loja</li>
+        <li>Sobre</li>
+        <li>Contato</li>
+        <li><button onClick={toggleDarkMode}>Alterar Tema</button></li>
       </ul>
     </nav>
   );
