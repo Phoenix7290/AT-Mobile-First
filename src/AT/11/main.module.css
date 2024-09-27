@@ -102,6 +102,14 @@
     text-align: center;
   }
 
+  .container main button {
+    display: none;
+  }
+
+  .menuList.open {
+    display: none;
+  }
+
   .container article {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
