@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Header from "./components/Header";
 import FriendPost from "./components/FriendPost";
 import FriendList from "./components/FriendList";
@@ -6,8 +5,6 @@ import SuggestionsList from "./components/SuggestionsList";
 import { Container, Box } from "@mui/material";
 
 export default function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const friends = [
     { id: 1, name: "João", mutualFriends: 2, image: "https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w" },
     { id: 2, name: "Pedro", mutualFriends: 3, image: "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=600" },
@@ -22,7 +19,7 @@ export default function App() {
 
   return (
     <Container>
-      <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <Header/>
       <Box 
         component="main" 
         sx={{
