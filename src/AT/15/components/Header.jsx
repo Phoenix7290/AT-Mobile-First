@@ -2,7 +2,7 @@ import { MdForum } from "react-icons/md";
 import PropTypes from "prop-types";
 import { AppBar, Toolbar, IconButton, Typography, Button } from "@mui/material";
 
-export default function Header({ isMenuOpen, setIsMenuOpen }) {
+export default function Header() {
   return (
     <AppBar position="static">
       <Toolbar>
@@ -12,7 +12,7 @@ export default function Header({ isMenuOpen, setIsMenuOpen }) {
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
           Social Media
         </Typography>
-        <Button color="inherit" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <Button color="inherit">
           Menu
         </Button>
       </Toolbar>
